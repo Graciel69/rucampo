@@ -1,205 +1,219 @@
-<form class="mt-5 col-md-8 offset-md-2">
-  <div class="form-group">
-    <img
-      style="
-        height: 100px;
-        width: 100px;
-        background-position: 50%;
-        border-radius: 50%;
-        background-size: 100% auto;
-        margin-left: 42%;
-      "
-      src="../../../../assets//img/camera.png"
-      class="img-camera"
-      alt=""
-    />
-  </div>
-  <div class="form row">
-    <div class="form-group col-md-6">
-      <label for="direccion">Dirección </label>
-      <input
-        id="direccion"
-        type="text"
-        placeholder="Intruduce una dirección"
-        class="form-control"
+<div
+  style="
+    background-color: rgb(238, 238, 238);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <form
+    class="col-md-11"
+    style="background-color: white; margin-top: 40px; margin-bottom: 40px"
+  >
+    <div class="form-group">
+      <img
+        style="
+          height: 100px;
+          width: 100px;
+          background-position: 50%;
+          border-radius: 50%;
+          background-size: 100% auto;
+          margin-left: 45%;
+          margin-top: 5%;
+        "
+        src="../../../../assets//img/camera.png"
+        class="img-camera"
+        alt=""
       />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    </div>
+    <div class="form row">
+      <div class="form-group col-md-6">
+        <label for="direccion">Dirección </label>
+        <input
+          id="direccion"
+          type="text"
+          placeholder="Intruduce una dirección"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">Salón </label>
+        <input
+          id="salon"
+          type="text"
+          placeholder="Introduce un salón"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="salon">Salón </label>
-      <input
-        id="salon"
-        type="text"
-        placeholder="Introduce un salón"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    <div class="row mt-3">
+      <div class="form-group col-md-6">
+        <label for="direccion">Piso </label>
+        <input
+          id="direccion"
+          type="text"
+          placeholder="Intruduce el piso"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">Número </label>
+        <input
+          id="salon"
+          type="text"
+          placeholder="Introduce el número"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row mt-3">
-    <div class="form-group col-md-6">
-      <label for="direccion">Piso </label>
-      <input
-        id="direccion"
-        type="text"
-        placeholder="Intruduce el piso"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    <div class="row mt-3">
+      <div class="form-group col-md-6">
+        <label for="direccion">Propietario </label>
+        <input
+          id="direccion"
+          type="Select"
+          placeholder="Seleccionar"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">Puerta </label>
+        <input
+          id="salon"
+          type="text"
+          placeholder="Introduce la puerta"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="salon">Número </label>
-      <input
-        id="salon"
-        type="text"
-        placeholder="Introduce el número"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    <div class="row mt-3">
+      <div class="form-group col-md-6">
+        <label for="direccion">Teléfono</label>
+        <input
+          id="direccion"
+          type="number"
+          placeholder="Intruduce el teléfono"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">Inquilino </label>
+        <input
+          id="salon"
+          type="text"
+          placeholder="Introduce el nombre del inquilino"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row mt-3">
-    <div class="form-group col-md-6">
-      <label for="direccion">Propietario </label>
-      <input
-        id="direccion"
-        type="Select"
-        placeholder="Seleccionar"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    <div class="row mt-3">
+      <div class="form-group col-md-6">
+        <label for="direccion">Dormitorios</label>
+        <input
+          id="direccion"
+          type="number"
+          placeholder="Intruduce el numero de dormitorios"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">Valoracion </label>
+        <input
+          id="salon"
+          type="select"
+          placeholder="Seleccionar"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="salon">Puerta </label>
-      <input
-        id="salon"
-        type="text"
-        placeholder="Introduce la puerta"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    <div class="row mt-3">
+      <div class="form-group col-md-6">
+        <label for="direccion">Baño</label>
+        <input
+          id="direccion"
+          type="number"
+          placeholder="Intruduce el numero de baños"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">Cocina </label>
+        <input
+          id="salon"
+          type="text"
+          placeholder="Introduce la cocina"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row mt-3">
-    <div class="form-group col-md-6">
-      <label for="direccion">Teléfono</label>
-      <input
-        id="direccion"
-        type="number"
-        placeholder="Intruduce el teléfono"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
+    <div class="row mt-3">
+      <div class="form-group col-md-6">
+        <label for="direccion">Terraza</label>
+        <input
+          id="direccion"
+          type="number"
+          placeholder="Intruduce el numero de terrazas"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salon">m2 </label>
+        <input
+          id="salon"
+          type="text"
+          placeholder="Selecciona"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          <span>This field is required</span>
+        </div>
       </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="salon">Inquilino </label>
-      <input
-        id="salon"
-        type="text"
-        placeholder="Introduce el nombre del inquilino"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="form-group col-md-6">
-      <label for="direccion">Dormitorios</label>
-      <input
-        id="direccion"
-        type="number"
-        placeholder="Intruduce el numero de dormitorios"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="salon">Valoracion </label>
-      <input
-        id="salon"
-        type="select"
-        placeholder="Seleccionar"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="form-group col-md-6">
-      <label for="direccion">Baño</label>
-      <input
-        id="direccion"
-        type="number"
-        placeholder="Intruduce el numero de baños"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="salon">Cocina </label>
-      <input
-        id="salon"
-        type="text"
-        placeholder="Introduce la cocina"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="form-group col-md-6">
-      <label for="direccion">Terraza</label>
-      <input
-        id="direccion"
-        type="number"
-        placeholder="Intruduce el numero de terrazas"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="salon">m2 </label>
-      <input
-        id="salon"
-        type="text"
-        placeholder="Selecciona"
-        class="form-control"
-      />
-      <div class="invalid-feedback">
-        <span>This field is required</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <button class="btn btn-primary mt-3" style="margin-left: 39%">
-      Crear Inmueble
-    </button>
-  </div>
-</form>
+    <div class="form-group">
+      <button class="btn btn-primary mt-3" style="margin-left: 42%">
+        Crear Inmueble
+      </button>
+    </div>
+  </form>
+</div>
