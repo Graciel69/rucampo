@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { NopageFoundComponent } from './nopage-found/nopage-found.component';
+import { CrearEncargoComponent } from './pages/encargo/crear-encargo/crear-encargo.component';
+import { EncargosComponent } from './pages/encargo/encargos/encargos.component';
 import { CrearInmuebleComponent } from './pages/inmueble/crear-inmueble/crear-inmueble.component';
+import { InmueblesComponent } from './pages/inmueble/inmuebles/inmuebles.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { UsersComponent } from './pages/users/users.component';
 
@@ -10,6 +13,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'users', component: UsersComponent },
   { path: 'crear-inmueble', component: CrearInmuebleComponent },
+  { path: 'inmuebles', component: InmueblesComponent },
+  { path: 'crear-encargo', component: CrearEncargoComponent },
+  { path: 'encargos', component: EncargosComponent },
   { path: '**', component: NopageFoundComponent },
 ];
 

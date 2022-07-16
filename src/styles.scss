@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+.img-camera {
+  height: 100px;
+  width: 100px;
+  /* los siguientes valores son independientes del tamaño del círculo */
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+  margin-top: 5%;
+}
+
+.crear-button {
+  margin-left: 39%;
+}
+
+label {
+  font-style: oblique;
+  font-size: small;
+  font-weight: normal !important;
+}
+
+input {
+  font-style: oblique;
+  background-color: rgb(238, 238, 238) !important;
+}
+
+.btn-inmueble {
+  font-style: oblique;
+  background-color: rgb(90, 140, 255);
+}
+
+.img-text {
+  font-style: oblique;
+  font-size: small;
+  font-weight: normal !important;
+  margin-top: 9px;
+  color: rgb(90, 140, 255);
+}
+
+.body-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  background-color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.body {
+  background-color: rgb(238, 238, 238) !important;
+}
+
+thead th {
+  font-style: oblique;
+  font-size: medium;
+  font-weight: normal !important;
+}
+
+.img-table {
+  height: 80px;
+  width: 80px;
+}
+
+td i {
+  font-size: 20px;
+  margin-right: 9px;
+}
+
+.table-content-center {
+  margin-top: 10%;
+}
+
+.table {
+  border-radius: 15px;
+}
+
+.table-page {
+  background-color: white;
+  margin-top: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
+}

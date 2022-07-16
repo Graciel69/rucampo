@@ -1,32 +1,10 @@
-<div
-  style="
-    background-color: rgb(238, 238, 238);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  "
->
-  <form
-    class="col-md-11"
-    style="background-color: white; margin-top: 40px; margin-bottom: 40px"
-  >
-    <div class="form-group">
-      <img
-        style="
-          height: 100px;
-          width: 100px;
-          background-position: 50%;
-          border-radius: 50%;
-          background-size: 100% auto;
-          margin-left: 45%;
-          margin-top: 5%;
-        "
-        src="../../../../assets//img/camera.png"
-        class="img-camera"
-        alt=""
-      />
+<div class="body-page">
+  <form class="col-md-11 page">
+    <div class="form-group text-center">
+      <img src="../../../../assets//img/camera.png" class="img-camera" alt="" />
+      <h3 class="img-text">Colocar imagen</h3>
     </div>
+
     <div class="form row">
       <div class="form-group col-md-6">
         <label for="direccion">Dirección </label>
@@ -55,9 +33,9 @@
     </div>
     <div class="row mt-3">
       <div class="form-group col-md-6">
-        <label for="direccion">Piso </label>
+        <label for="piso">Piso </label>
         <input
-          id="direccion"
+          id="piso"
           type="text"
           placeholder="Intruduce el piso"
           class="form-control"
@@ -67,9 +45,9 @@
         </div>
       </div>
       <div class="form-group col-md-6">
-        <label for="salon">Número </label>
+        <label for="numero">Número </label>
         <input
-          id="salon"
+          id="numero"
           type="text"
           placeholder="Introduce el número"
           class="form-control"
@@ -81,9 +59,9 @@
     </div>
     <div class="row mt-3">
       <div class="form-group col-md-6">
-        <label for="direccion">Propietario </label>
+        <label for="propietario">Propietario </label>
         <input
-          id="direccion"
+          id="propietario"
           type="Select"
           placeholder="Seleccionar"
           class="form-control"
@@ -93,9 +71,9 @@
         </div>
       </div>
       <div class="form-group col-md-6">
-        <label for="salon">Puerta </label>
+        <label for="puerta">Puerta </label>
         <input
-          id="salon"
+          id="puerta"
           type="text"
           placeholder="Introduce la puerta"
           class="form-control"
@@ -107,9 +85,9 @@
     </div>
     <div class="row mt-3">
       <div class="form-group col-md-6">
-        <label for="direccion">Teléfono</label>
+        <label for="telefono">Teléfono</label>
         <input
-          id="direccion"
+          id="telefono"
           type="number"
           placeholder="Intruduce el teléfono"
           class="form-control"
@@ -119,9 +97,9 @@
         </div>
       </div>
       <div class="form-group col-md-6">
-        <label for="salon">Inquilino </label>
+        <label for="inquilino">Inquilino </label>
         <input
-          id="salon"
+          id="inquilino"
           type="text"
           placeholder="Introduce el nombre del inquilino"
           class="form-control"
@@ -133,9 +111,9 @@
     </div>
     <div class="row mt-3">
       <div class="form-group col-md-6">
-        <label for="direccion">Dormitorios</label>
+        <label for="dormitorio">Dormitorios</label>
         <input
-          id="direccion"
+          id="dormitorio"
           type="number"
           placeholder="Intruduce el numero de dormitorios"
           class="form-control"
@@ -145,9 +123,9 @@
         </div>
       </div>
       <div class="form-group col-md-6">
-        <label for="salon">Valoracion </label>
+        <label for="valoracion">Valoracion </label>
         <input
-          id="salon"
+          id="valoracion"
           type="select"
           placeholder="Seleccionar"
           class="form-control"
@@ -159,9 +137,9 @@
     </div>
     <div class="row mt-3">
       <div class="form-group col-md-6">
-        <label for="direccion">Baño</label>
+        <label for="baño">Baño</label>
         <input
-          id="direccion"
+          id="baño"
           type="number"
           placeholder="Intruduce el numero de baños"
           class="form-control"
@@ -171,9 +149,9 @@
         </div>
       </div>
       <div class="form-group col-md-6">
-        <label for="salon">Cocina </label>
+        <label for="cocina">Cocina </label>
         <input
-          id="salon"
+          id="cocina"
           type="text"
           placeholder="Introduce la cocina"
           class="form-control"
@@ -185,9 +163,9 @@
     </div>
     <div class="row mt-3">
       <div class="form-group col-md-6">
-        <label for="direccion">Terraza</label>
+        <label for="terraza">Terraza</label>
         <input
-          id="direccion"
+          id="terraza"
           type="number"
           placeholder="Intruduce el numero de terrazas"
           class="form-control"
@@ -197,9 +175,9 @@
         </div>
       </div>
       <div class="form-group col-md-6">
-        <label for="salon">m2 </label>
+        <label for="m2">m2 </label>
         <input
-          id="salon"
+          id="m2"
           type="text"
           placeholder="Selecciona"
           class="form-control"
@@ -210,10 +188,8 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <button class="btn btn-primary mt-3" style="margin-left: 42%">
-        Crear Inmueble
-      </button>
+    <div class="form-group text-center">
+      <button class="btn btn-inmueble btn-primary mt-3">Crear Inmueble</button>
     </div>
   </form>
 </div>
