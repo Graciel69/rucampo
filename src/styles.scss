@@ -1,7 +1,7 @@
 .img-camera {
   height: 100px;
   width: 100px;
-  /* los siguientes valores son independientes del tamaño del círculo */
+
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;
@@ -83,4 +83,20 @@ td i {
   margin-top: 10%;
   margin-left: 4%;
   margin-right: 4%;
+}
+
+.table-encargo {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.logo {
+  height: 100px !important;
+  width: 100px !important;
+  margin-left: 25% !important;
+}
+
+.menu-foot a {
+  background-color: transparent !important;
+  text-decoration: none !important;
 }

@@ -1,12 +1,10 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-light-primary">
+<aside style="position: fixed" class="main-sidebar sidebar-light-primary">
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
-      </div>
+      <img class="logo" src="../../../assets/img/logo-rucampo.svg" alt="" />
     </div>
 
     <!-- Sidebar Menu -->
@@ -22,10 +20,14 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon far fa-envelope"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/casa-Rucampo.svg"
+              alt=""
+            />
             <p>
               Inmuebles
-              <i class="fas fa-angle-left right"></i>
+              <i class="fas fa-angle-left right mt-1"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
@@ -46,23 +48,35 @@
 
         <li class="nav-item">
           <a href="pages/widgets.html" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Mensajes-rucampo.svg"
+              alt=""
+            />
             <p>Noticias</p>
           </a>
         </li>
 
         <li class="nav-item">
           <a href="pages/calendar.html" class="nav-link">
-            <i class="nav-icon far fa-calendar-alt"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Adiquisicion-rucampo.svg"
+              alt=""
+            />
             <p>Adquisición</p>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon far fa-envelope"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Encargo-rucampo.svg"
+              alt=""
+            />
             <p>
               Encargos
-              <i class="fas fa-angle-left right"></i>
+              <i class="fas fa-angle-left right mt-1"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
@@ -83,7 +97,11 @@
 
         <li class="nav-item">
           <a href="pages/kanban.html" class="nav-link">
-            <i class="nav-icon fas fa-columns"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Pedido-rucampo.svg"
+              alt=""
+            />
             <p>Pedido</p>
           </a>
         </li>
@@ -92,26 +110,54 @@
 
         <li class="nav-item">
           <a href="pages/gallery.html" class="nav-link">
-            <i class="nav-icon far fa-image"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Cita-rucampo.svg"
+              alt=""
+            />
             <p>Cita Comercial</p>
           </a>
         </li>
 
         <li class="nav-item">
           <a href="pages/gallery.html" class="nav-link">
-            <i class="nav-icon far fa-image"></i>
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Agenda-rucampo.svg"
+              alt=""
+            />
             <p>Agenda</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="pages/gallery.html" class="nav-link">
-            <i class="nav-icon far fa-image"></i>
-            <p>Propietarios</p>
+          <a href="#" class="nav-link">
+            <img
+              class="nav-icon mr-1"
+              src="../../../assets/Iconos-Rucampo-Menu/Propietarios-rucampo.svg"
+              alt=""
+            />
+            <p>
+              Propietarios
+              <i class="fas fa-angle-left right mt-1"></i>
+            </p>
           </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a routerLink="propietarios" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Ver Propietarios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="crear-propietario" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Crear Propietario</p>
+              </a>
+            </li>
+          </ul>
         </li>
         <hr />
-
-        <li class="nav-item position">
+        <li class="nav-item">
           <a href="pages/gallery.html" class="nav-link">
             <i class="nav-icon fa-regular fa-circle-question"></i>
             <p>Settings</p>

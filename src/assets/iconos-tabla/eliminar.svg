@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bin</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="pedidos" transform="translate(-1242.000000, -295.000000)" stroke="#EF3826" stroke-width="1.2">
+            <g id="Group" transform="translate(1179.000000, 287.000000)">
+                <g id="bin" transform="translate(64.000000, 9.000000)">
+                    <path d="M13.1868132,15 L3.95604396,15 C3.22775637,15 2.63736264,14.4403559 2.63736264,13.75 L2.63736264,2.5 L14.5054945,2.5 L14.5054945,13.75 C14.5054945,14.4403559 13.9151008,15 13.1868132,15 Z" id="Path"></path>
+                    <line x1="6.59340659" y1="11.25" x2="6.59340659" y2="6.25" id="Path"></line>
+                    <line x1="10.5494505" y1="11.25" x2="10.5494505" y2="6.25" id="Path"></line>
+                    <line x1="0" y1="2.5" x2="17.1428571" y2="2.5" id="Path"></line>
+                    <path d="M10.5494505,0 L6.59340659,0 C5.86511901,0 5.27472527,0.559644063 5.27472527,1.25 L5.27472527,2.5 L11.8681319,2.5 L11.8681319,1.25 C11.8681319,0.559644063 11.2777381,0 10.5494505,0 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

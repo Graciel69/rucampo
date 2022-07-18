@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pencil-write</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.600000024" stroke-linecap="round" stroke-linejoin="round">
+        <g id="pedidos" transform="translate(-1195.000000, -294.000000)" stroke="#000000" stroke-width="1.2">
+            <g id="Group" transform="translate(1179.000000, 287.000000)">
+                <g id="pencil-write" transform="translate(17.000000, 8.000000)">
+                    <path d="M8.74310576,9.51922534 L6.10346293,9.89680832 L6.48035159,7.25657173 L13.2686141,0.468610906 C13.8934564,-0.156203635 14.906526,-0.156203635 15.5313683,0.468610906 C16.1562106,1.09342545 16.1562106,2.10644997 15.5313683,2.73126451 L8.74310576,9.51922534 Z" id="Path"></path>
+                    <line x1="12.5141257" y1="1.2230658" x2="14.7768798" y2="3.48571941" id="Path"></line>
+                    <path d="M12.7999922,9.60028835 L12.7999922,14.9333814 C12.7999922,15.5224586 12.3224295,16 11.7333261,16 L1.06666601,16 C0.477562641,16 0,15.5224586 0,14.9333814 L0,4.26719531 C0,3.67811812 0.477562641,3.2005767 1.06666601,3.2005767 L6.39999608,3.2005767" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

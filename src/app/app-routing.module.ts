@@ -7,6 +7,8 @@ import { EncargosComponent } from './pages/encargo/encargos/encargos.component';
 import { CrearInmuebleComponent } from './pages/inmueble/crear-inmueble/crear-inmueble.component';
 import { InmueblesComponent } from './pages/inmueble/inmuebles/inmuebles.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
+import { CrearPropietarioComponent } from './pages/propietario/crear-propietario/crear-propietario.component';
+import { PropietariosComponent } from './pages/propietario/propietarios/propietarios.component';
 import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'inmuebles', component: InmueblesComponent },
   { path: 'crear-encargo', component: CrearEncargoComponent },
   { path: 'encargos', component: EncargosComponent },
+  { path: 'crear-propietario', component: CrearPropietarioComponent },
+  { path: 'propietarios', component: PropietariosComponent },
   { path: '**', component: NopageFoundComponent },
 ];
 
