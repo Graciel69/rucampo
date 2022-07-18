@@ -1,1 +1,197 @@
-<p>noticias works!</p>
+<div class="body-page">
+  <table class="table table-responsive-lg table-page">
+    <thead>
+      <tr>
+        <th scope="col">Imagen</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Propietario</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Asesor</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          <img
+            class="img-table"
+            src="https://contaduriapublica.org.mx/wp-content/uploads/2020/01/shutterstock_189023420-1140x812.jpg"
+            alt=""
+          />
+        </th>
+        <td>
+          <div class="table-content-center">Calle Perez,1</div>
+        </td>
+        <td>
+          <div class="table-content-center">Illya Alvarado</div>
+        </td>
+        <td>
+          <div class="table-content-center">634 65 74 87</div>
+        </td>
+        <td>
+          <div class="table-content-center">Carlos Gil</div>
+        </td>
+        <td>
+          <div class="table-content-center">80.000€</div>
+        </td>
+        <td>
+          <div class="table-content-center">
+            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
+
+            <img
+              class="mr-2 ml-2"
+              src="../../../../assets/iconos-tabla/eliminar.svg"
+              alt=""
+            />
+
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              src="../../../../assets/iconos-tabla/Comentario.svg"
+              alt=""
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <img
+            class="img-table"
+            src="https://www.mantyobras.com/blog/wp-content/uploads/2011/11/p1020455.jpg"
+            alt=""
+          />
+        </th>
+        <td>
+          <div class="table-content-center">Calle Perez,1</div>
+        </td>
+        <td>
+          <div class="table-content-center">Illya Alvarado</div>
+        </td>
+        <td>
+          <div class="table-content-center">634 65 74 87</div>
+        </td>
+        <td>
+          <div class="table-content-center">Carlos Gil</div>
+        </td>
+        <td>
+          <div class="table-content-center">80.000€</div>
+        </td>
+        <td>
+          <div class="table-content-center">
+            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
+
+            <img
+              class="mr-2 ml-2"
+              src="../../../../assets/iconos-tabla/eliminar.svg"
+              alt=""
+            />
+
+            <img src="../../../../assets/iconos-tabla/Comentario.svg" alt="" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <img
+            class="img-table"
+            src="https://blog.kolau.com/wp-content/uploads/2019/01/architecture-1836070_960_720-1.jpg"
+            alt=""
+          />
+        </th>
+        <td>
+          <div class="table-content-center">Calle Perez,1</div>
+        </td>
+        <td>
+          <div class="table-content-center">Illya Alvarado</div>
+        </td>
+        <td>
+          <div class="table-content-center">634 65 74 87</div>
+        </td>
+        <td>
+          <div class="table-content-center">Carlos Gil</div>
+        </td>
+        <td>
+          <div class="table-content-center">80.000€</div>
+        </td>
+        <td>
+          <div class="table-content-center">
+            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
+
+            <img
+              class="mr-2 ml-2"
+              src="../../../../assets/iconos-tabla/eliminar.svg"
+              alt=""
+            />
+
+            <img src="../../../../assets/iconos-tabla/Comentario.svg" alt="" />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div
+      style="border-radius: 15px !important; padding: 3%"
+      class="modal-content"
+    >
+      <div class="modal-header">
+        <label for="comentario">Comentario</label>
+      </div>
+      <div class="modal-body">
+        <textarea
+          class="form-control"
+          style="border-radius: 8px !important"
+          name=""
+          placeholder="Introduce el comentario"
+          id="comentario"
+          cols="56"
+          rows="5"
+        ></textarea>
+        <div>
+          <p class="mt-2">Has aceptado el encargo?</p>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="encargo"
+              id="si"
+              value="si"
+            />
+            <label class="form-check-label" for="si"> Si </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="encargo"
+              id="no"
+              value="no"
+              checked
+            />
+            <label class="form-check-label" for="no"> No </label>
+          </div>
+          <div class="modal-footer">
+            <button
+              style="margin-right: 40%"
+              type="submit"
+              class="btn btn-inmueble btn-primary"
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

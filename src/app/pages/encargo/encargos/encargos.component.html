@@ -1,5 +1,5 @@
 <div class="body-page">
-  <table class="table table-page">
+  <table class="table table-responsive-lg table-page">
     <thead>
       <tr>
         <th scope="col">Imagen</th>
@@ -46,6 +46,8 @@
             />
 
             <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
               class="mr-2"
               src="../../../../assets/iconos-tabla/Comentario.svg"
               alt=""
@@ -148,3 +150,103 @@
 >
   Crear Encargo
 </button>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div
+      style="border-radius: 15px !important; padding: 3%"
+      class="modal-content"
+    >
+      <div class="modal-header">
+        <label for="comentario">Comentario</label>
+      </div>
+      <div class="modal-body">
+        <textarea
+          class="form-control"
+          style="border-radius: 8px !important"
+          name=""
+          placeholder="Introduce el comentario"
+          id="comentario"
+          cols="56"
+          rows="5"
+        ></textarea>
+        <div>
+          <div style="display: inline-block; margin-right: 25%">
+            <p class="mt-2">El encargo ha sido renovado?</p>
+          </div>
+
+          <div
+            style="display: inline-block; margin-right: 2%"
+            class="form-check"
+          >
+            <input
+              class="form-check-input"
+              type="radio"
+              name="renovado"
+              id="si"
+              value="si"
+            />
+            <label class="form-check-label" for="si"> Si </label>
+          </div>
+          <div style="display: inline-block" class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="renovado"
+              id="no"
+              value="no"
+              checked
+            />
+            <label class="form-check-label" for="no"> No </label>
+          </div>
+        </div>
+
+        <div>
+          <div style="display: inline-block; margin-right: 26%">
+            <p class="mt-2">El encargo ha sido rebajado?</p>
+          </div>
+
+          <div
+            style="display: inline-block; margin-right: 2%"
+            class="form-check"
+          >
+            <input
+              class="form-check-input"
+              type="radio"
+              name="rebajado"
+              id="si"
+              value="si"
+            />
+            <label class="form-check-label" for="si"> Si </label>
+          </div>
+          <div style="display: inline-block" class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="rebajado"
+              id="no"
+              value="no"
+              checked
+            />
+            <label class="form-check-label" for="no"> No </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            style="margin-right: 40%"
+            type="submit"
+            class="btn btn-inmueble btn-primary"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

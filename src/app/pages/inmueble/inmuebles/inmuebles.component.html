@@ -1,5 +1,5 @@
 <div class="body-page">
-  <table class="table table-page">
+  <table class="table table-responsive-lg table-page">
     <thead>
       <tr>
         <th scope="col">Imagen</th>
@@ -45,7 +45,12 @@
               alt=""
             />
 
-            <img src="../../../../assets/iconos-tabla/Comentario.svg" alt="" />
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              src="../../../../assets/iconos-tabla/Comentario.svg"
+              alt=""
+            />
           </div>
         </td>
       </tr>
@@ -82,7 +87,12 @@
               alt=""
             />
 
-            <img src="../../../../assets/iconos-tabla/Comentario.svg" alt="" />
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              src="../../../../assets/iconos-tabla/Comentario.svg"
+              alt=""
+            />
           </div>
         </td>
       </tr>
@@ -119,7 +129,12 @@
               alt=""
             />
 
-            <img src="../../../../assets/iconos-tabla/Comentario.svg" alt="" />
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              src="../../../../assets/iconos-tabla/Comentario.svg"
+              alt=""
+            />
           </div>
         </td>
       </tr>
@@ -133,3 +148,67 @@
 >
   Crear Inmueble
 </button>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div
+      style="border-radius: 15px !important; padding: 3%"
+      class="modal-content"
+    >
+      <div class="modal-header">
+        <label for="comentario">Comentario</label>
+      </div>
+      <div class="modal-body">
+        <textarea
+          class="form-control"
+          style="border-radius: 8px !important"
+          name=""
+          placeholder="Introduce el comentario"
+          id="comentario"
+          cols="56"
+          rows="5"
+        ></textarea>
+        <div>
+          <p class="mt-2">El comprador sigue interesado en vender?</p>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="vender"
+              id="si"
+              value="si"
+            />
+            <label class="form-check-label" for="si"> Si </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="vender"
+              id="no"
+              value="no"
+              checked
+            />
+            <label class="form-check-label" for="no"> No </label>
+          </div>
+          <div class="modal-footer">
+            <button
+              style="margin-right: 40%"
+              type="submit"
+              class="btn btn-inmueble btn-primary"
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
