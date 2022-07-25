@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let inmueble of inmuebles">
         <th>
           <img
             class="img-table"
@@ -21,100 +21,16 @@
           />
         </th>
         <td>
-          <div class="table-content-center">Calle Perez,1</div>
+          <div class="table-content-center">{{ inmueble.direccion }}</div>
         </td>
         <td>
-          <div class="table-content-center">Illya Alvarado</div>
+          <div class="table-content-center">{{ inmueble.propietarioId }}</div>
         </td>
         <td>
-          <div class="table-content-center">634 65 74 87</div>
+          <div class="table-content-center">{{ inmueble.telefono }}</div>
         </td>
         <td>
-          <div class="table-content-center">Carlos Gil</div>
-        </td>
-        <td>
-          <div class="table-content-center"></div>
-        </td>
-        <td>
-          <div class="table-content-center">
-            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
-
-            <img
-              class="mr-2 ml-2"
-              src="../../../../assets/iconos-tabla/eliminar.svg"
-              alt=""
-            />
-
-            <img
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              src="../../../../assets/iconos-tabla/Comentario.svg"
-              alt=""
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th>
-          <img
-            class="img-table"
-            src="https://www.mantyobras.com/blog/wp-content/uploads/2011/11/p1020455.jpg"
-            alt=""
-          />
-        </th>
-        <td>
-          <div class="table-content-center">Calle Perez,1</div>
-        </td>
-        <td>
-          <div class="table-content-center">Illya Alvarado</div>
-        </td>
-        <td>
-          <div class="table-content-center">634 65 74 87</div>
-        </td>
-        <td>
-          <div class="table-content-center">Carlos Gil</div>
-        </td>
-        <td>
-          <div class="table-content-center"></div>
-        </td>
-        <td>
-          <div class="table-content-center">
-            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
-
-            <img
-              class="mr-2 ml-2"
-              src="../../../../assets/iconos-tabla/eliminar.svg"
-              alt=""
-            />
-
-            <img
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              src="../../../../assets/iconos-tabla/Comentario.svg"
-              alt=""
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th>
-          <img
-            class="img-table"
-            src="https://blog.kolau.com/wp-content/uploads/2019/01/architecture-1836070_960_720-1.jpg"
-            alt=""
-          />
-        </th>
-        <td>
-          <div class="table-content-center">Calle Perez,1</div>
-        </td>
-        <td>
-          <div class="table-content-center">Illya Alvarado</div>
-        </td>
-        <td>
-          <div class="table-content-center">634 65 74 87</div>
-        </td>
-        <td>
-          <div class="table-content-center">Carlos Gil</div>
+          <div class="table-content-center">Asesor</div>
         </td>
         <td>
           <div class="table-content-center"></div>

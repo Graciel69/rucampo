@@ -1,5 +1,5 @@
 <div class="body-page">
-  <form class="col-md-11 page">
+  <form class="col-md-11 page" (ngSubmit)="onSave()" [formGroup]="inmuebleForm">
     <div class="form-group text-center">
       <img src="../../../../assets//img/camera.png" class="img-camera" alt="" />
       <h3 class="img-text">Colocar imagen</h3>
@@ -13,6 +13,8 @@
           type="text"
           placeholder="Intruduce una dirección"
           class="form-control"
+          formControlName="direccion"
+          [class]="isvalidField('direccion')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -25,6 +27,8 @@
           type="text"
           placeholder="Introduce un salón"
           class="form-control"
+          formControlName="salon"
+          [class]="isvalidField('salon')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -39,6 +43,8 @@
           type="text"
           placeholder="Intruduce el piso"
           class="form-control"
+          formControlName="piso"
+          [class]="isvalidField('piso')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -48,9 +54,11 @@
         <label for="numero">Número </label>
         <input
           id="numero"
-          type="text"
+          type="number"
           placeholder="Introduce el número"
           class="form-control"
+          formControlName="numero"
+          [class]="isvalidField('numero')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -65,6 +73,8 @@
           type="Select"
           placeholder="Seleccionar"
           class="form-control"
+          formControlName="propietarioId"
+          [class]="isvalidField('propietarioId')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -77,6 +87,8 @@
           type="text"
           placeholder="Introduce la puerta"
           class="form-control"
+          formControlName="puerta"
+          [class]="isvalidField('puerta')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -91,6 +103,8 @@
           type="number"
           placeholder="Intruduce el teléfono"
           class="form-control"
+          formControlName="telefono"
+          [class]="isvalidField('telefono')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -103,6 +117,8 @@
           type="text"
           placeholder="Introduce el nombre del inquilino"
           class="form-control"
+          formControlName="inquilino"
+          [class]="isvalidField('inquilino')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -117,6 +133,8 @@
           type="number"
           placeholder="Intruduce el numero de dormitorios"
           class="form-control"
+          formControlName="dormitorio"
+          [class]="isvalidField('dormitorio')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -129,6 +147,8 @@
           type="select"
           placeholder="Seleccionar"
           class="form-control"
+          formControlName="valoracion"
+          [class]="isvalidField('valoracion')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -143,6 +163,8 @@
           type="number"
           placeholder="Intruduce el numero de baños"
           class="form-control"
+          formControlName="baño"
+          [class]="isvalidField('baño')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -155,6 +177,8 @@
           type="text"
           placeholder="Introduce la cocina"
           class="form-control"
+          formControlName="cocina"
+          [class]="isvalidField('cocina')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -169,6 +193,8 @@
           type="number"
           placeholder="Intruduce el numero de terrazas"
           class="form-control"
+          formControlName="terraza"
+          [class]="isvalidField('terraza')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -181,6 +207,8 @@
           type="text"
           placeholder="Selecciona"
           class="form-control"
+          formControlName="m2"
+          [class]="isvalidField('m2')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -189,7 +217,13 @@
     </div>
 
     <div class="form-group text-center">
-      <button class="btn btn-inmueble btn-primary mt-3">Crear Inmueble</button>
+      <button
+        type="submit"
+        (click)="onSave()"
+        class="btn btn-inmueble btn-primary mt-3"
+      >
+        Crear Inmueble
+      </button>
     </div>
   </form>
 </div>

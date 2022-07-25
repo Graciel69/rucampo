@@ -15,6 +15,9 @@ import { CrearPropietarioComponent } from './propietario/crear-propietario/crear
 import { PropietariosComponent } from './propietario/propietarios/propietarios.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,14 @@ import { NoticiasComponent } from './noticias/noticias.component';
     AgendaComponent,
     NoticiasComponent,
   ],
-  imports: [CommonModule, RouterModule, SharedModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    SharedModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MaterialModule,
+  ],
   exports: [DashboardComponent, UsersComponent],
 })
 export class PagesModule {}

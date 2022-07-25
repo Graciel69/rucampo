@@ -97,11 +97,15 @@ td i {
 
 .logo {
   height: 100px !important;
-  width: 100px !important;
-  margin-left: 25% !important;
+  width: 60% !important;
+  margin: auto;
+  max-width: 100px;
 }
 
 .menu-foot a {
   background-color: transparent !important;
   text-decoration: none !important;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -9,6 +9,8 @@ import { NopageFoundComponent } from './nopage-found/nopage-found.component';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [AppComponent, NopageFoundComponent],
@@ -20,6 +22,8 @@ import { SharedModule } from './shared/shared.module';
     AuthModule,
     PagesModule,
     SharedModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
 
   providers: [],

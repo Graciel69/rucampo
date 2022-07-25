@@ -1,5 +1,10 @@
 <div class="body-page">
-  <form class="col-md-11 page" style="margin-top: 10%">
+  <form
+    class="col-md-11 page"
+    style="margin-top: 10%"
+    (ngSubmit)="onSave()"
+    [formGroup]="propietarioForm"
+  >
     <div class="form-group text-center">
       <img src="../../../../assets//img/camera.png" class="img-camera" alt="" />
       <h3 class="img-text">Colocar imagen</h3>
@@ -13,6 +18,8 @@
           type="text"
           placeholder="Intruduce el nombre"
           class="form-control"
+          formControlName="nombre"
+          [class]="isvalidField('nombre')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -25,6 +32,8 @@
           type="text"
           placeholder="Introduce el apellido"
           class="form-control"
+          formControlName="apellido"
+          [class]="isvalidField('apellido')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>
@@ -39,6 +48,8 @@
           type="text"
           placeholder="Intruduce el teléfono"
           class="form-control"
+          formControlName="telefono"
+          [class]="isvalidField('telefono')"
         />
         <div class="invalid-feedback">
           <span>This field is required</span>

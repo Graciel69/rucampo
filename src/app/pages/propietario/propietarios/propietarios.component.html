@@ -6,83 +6,25 @@
         <th scope="col">Apellido</th>
         <th scope="col">Teléfono</th>
         <th scope="col">Vivienda</th>
-        <th scope="col">Precio</th>
+
         <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let propietario of propietarios">
         <td>
-          <div class="table-encargo">Illya</div>
+          <div class="table-encargo">{{ propietario.nombre }}</div>
         </td>
         <td>
-          <div class="table-encargo">Alvarado</div>
+          <div class="table-encargo">{{ propietario.apellido }}</div>
         </td>
         <td>
-          <div class="table-encargo">634 65 74 87</div>
+          <div class="table-encargo">{{ propietario.telefono }}</div>
         </td>
         <td>
-          <div class="table-encargo">Carlos Gil</div>
+          <div class="table-encargo">{{ propietario.vivienda }}</div>
         </td>
-        <td>
-          <div class="table-encargo">80.000€</div>
-        </td>
-        <td>
-          <div class="table-content-center">
-            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
 
-            <img
-              class="ml-2"
-              src="../../../../assets/iconos-tabla/eliminar.svg"
-              alt=""
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="table-encargo">Illya</div>
-        </td>
-        <td>
-          <div class="table-encargo">Alvarado</div>
-        </td>
-        <td>
-          <div class="table-encargo">634 65 74 87</div>
-        </td>
-        <td>
-          <div class="table-encargo">Carlos Gil</div>
-        </td>
-        <td>
-          <div class="table-encargo">80.000€</div>
-        </td>
-        <td>
-          <div class="table-content-center">
-            <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
-
-            <img
-              class="ml-2"
-              src="../../../../assets/iconos-tabla/eliminar.svg"
-              alt=""
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="table-encargo">Illya</div>
-        </td>
-        <td>
-          <div class="table-encargo">Alvarado</div>
-        </td>
-        <td>
-          <div class="table-encargo">634 65 74 87</div>
-        </td>
-        <td>
-          <div class="table-encargo">Carlos Gil</div>
-        </td>
-        <td>
-          <div class="table-encargo">80.000€</div>
-        </td>
         <td>
           <div class="table-content-center">
             <img src="../../../../assets/iconos-tabla/editar.svg" alt="" />
