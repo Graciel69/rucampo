@@ -68,14 +68,27 @@
     <div class="row mt-3">
       <div class="form-group col-md-6">
         <label for="propietario">Propietario </label>
-        <input
+        <!-- <input
           id="propietario"
           type="Select"
           placeholder="Seleccionar"
           class="form-control"
           formControlName="propietarioId"
           [class]="isvalidField('propietarioId')"
-        />
+
+        /> -->
+        <select
+          class="form-control"
+          formControlName="propietarioId"
+          aria-label="Default select example"
+        >
+          <option
+            *ngFor="let propietario of propietarios"
+            value="{{ propietario.id }}"
+          >
+            {{ propietario.nombre }}
+          </option>
+        </select>
         <div class="invalid-feedback">
           <span>This field is required</span>
         </div>

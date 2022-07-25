@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { InmueblesService } from 'src/app/services/inmuebles.service';
+import { PropietariosService } from 'src/app/services/propietarios.service';
 import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
 
 @Component({
@@ -11,23 +12,31 @@ import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
   styleUrls: ['./crear-inmueble.component.scss'],
 })
 export class CrearInmuebleComponent implements OnInit {
+  propietarios: any;
   inmueble: any;
   inmuebleForm!: FormGroup;
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private inmuebleSvc: InmueblesService
+    private inmuebleSvc: InmueblesService,
+    private propietarioSvc: PropietariosService
   ) {
     this.initForm();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.propietarioSvc
+      .getPropietarios()
+      .subscribe((propietario) => (this.propietarios = propietario));
+  }
 
   onSave() {
     if (this.inmuebleForm.valid) {
       const inmueble: Inmueble = this.inmuebleForm.value;
 
-      const createdInmueble = this.inmuebleSvc.createInmueble(inmueble);
+      console.log(inmueble);
+
+      // const createdInmueble = this.inmuebleSvc.createInmueble(inmueble);
     } else {
       console.log('Error de formulario');
     }
@@ -49,7 +58,7 @@ export class CrearInmuebleComponent implements OnInit {
       salon: ['', [Validators.required]],
       piso: ['', [Validators.required]],
       numero: ['', [Validators.required]],
-      propietarioId: ['', [Validators.required]],
+      propietarioId: [''],
       puerta: ['', [Validators.required]],
       telefono: ['', [Validators.required]],
       inquilino: ['', [Validators.required]],

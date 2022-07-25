@@ -24,6 +24,11 @@ input {
   background-color: rgb(238, 238, 238) !important;
 }
 
+select {
+  font-style: oblique;
+  background-color: rgb(238, 238, 238) !important;
+}
+
 textarea {
   font-style: oblique;
   background-color: rgb(238, 238, 238) !important;
@@ -107,5 +112,11 @@ td i {
   text-decoration: none !important;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
