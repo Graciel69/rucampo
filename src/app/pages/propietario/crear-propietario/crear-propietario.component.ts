@@ -46,7 +46,7 @@ export class CrearPropietarioComponent implements OnInit {
       nombre: ['', [Validators.required]],
       apellido: ['', [Validators.required]],
       telefono: ['', [Validators.required]],
-      vivienda: ['algo', [Validators.required]],
+      viviendaId: ['0', [Validators.required]],
     });
   }
 }

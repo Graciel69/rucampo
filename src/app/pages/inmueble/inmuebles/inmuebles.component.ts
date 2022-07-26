@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { InmueblesService } from 'src/app/services/inmuebles.service';
 import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
 import { tap } from 'rxjs/operators';
+import { PropietariosService } from 'src/app/services/propietarios.service';
 
 @Component({
   selector: 'app-inmuebles',
@@ -11,7 +12,11 @@ import { tap } from 'rxjs/operators';
 })
 export class InmueblesComponent implements OnInit {
   inmuebles!: Inmueble[];
-  constructor(private router: Router, private inmuebleSvc: InmueblesService) {
+  constructor(
+    private router: Router,
+    private inmuebleSvc: InmueblesService,
+    private propietarioSvc: PropietariosService
+  ) {
     this.inmuebleSvc.getInmuebles().subscribe((inmueble) => {
       this.inmuebles = inmueble;
     });

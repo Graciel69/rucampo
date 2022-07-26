@@ -18,4 +18,8 @@ export class InmueblesService {
   getInmuebles(): Observable<Inmueble[]> {
     return this.http.get<Inmueble[]>('http://localhost:3000/api/inmuebles');
   }
+
+  getInmueble(id: any) {
+    return this.http.get(`http://localhost:3000/api/inmuebles/${id}`);
+  }
 }

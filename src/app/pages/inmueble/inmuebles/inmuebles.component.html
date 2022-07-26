@@ -24,7 +24,9 @@
           <div class="table-content-center">{{ inmueble.direccion }}</div>
         </td>
         <td>
-          <div class="table-content-center">{{ inmueble.propietarioId }}</div>
+          <div class="table-content-center">
+            {{ inmueble.propietario?.nombre }}
+          </div>
         </td>
         <td>
           <div class="table-content-center">{{ inmueble.telefono }}</div>

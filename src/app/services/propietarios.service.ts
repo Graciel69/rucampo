@@ -18,4 +18,8 @@ export class PropietariosService {
   getPropietarios() {
     return this.http.get('http://localhost:3000/api/propietarios');
   }
+
+  getPropietario(id: any) {
+    return this.http.get(`http://localhost:3000/api/propietarios/${id}`);
+  }
 }

@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let propietario of propietarios">
+      <tr *ngFor="let propietario of propietarios; index as index">
         <td>
           <div class="table-encargo">{{ propietario.nombre }}</div>
         </td>
@@ -22,7 +22,9 @@
           <div class="table-encargo">{{ propietario.telefono }}</div>
         </td>
         <td>
-          <div class="table-encargo">{{ propietario.vivienda }}</div>
+          <div class="table-encargo">
+            {{ propietario.vivienda[0].direccion }}
+          </div>
         </td>
 
         <td>
