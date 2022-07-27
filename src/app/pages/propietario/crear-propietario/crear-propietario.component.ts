@@ -46,7 +46,7 @@ export class CrearPropietarioComponent implements OnInit {
     }
   }
 
-  onFileChanged(event:any) {
+  /*onFileChanged(event:any) {
     const file = event.target.files[0]
 
     const uploadData = new FormData();
@@ -55,7 +55,7 @@ export class CrearPropietarioComponent implements OnInit {
       .subscribe(data=>{
         console.log(data);
       });
-  }
+  }*/
 
 
   private initForm(): void {

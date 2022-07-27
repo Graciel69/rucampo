@@ -51,11 +51,11 @@ export class CrearInmuebleComponent implements OnInit {
     const uploadData = new FormData();
     uploadData.append('myFile', file, Date.now().toString()+'.jpg');
     this.http.post('https://server.rucampo.com:3000/api/files', uploadData)
-      .subscribe(data=>{
-        console.log(data);
-        
+      .subscribe((data:any)=>{
+        console.log(data.file);
+
         this.inmuebleForm.patchValue({
-          img_url: data
+          img_url: 'https://server.rucampo.com/images/'+data.file
         })
       });
   }
