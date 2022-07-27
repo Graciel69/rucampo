@@ -5,7 +5,7 @@ import { tap } from 'rxjs/operators';
 import { InmueblesService } from 'src/app/services/inmuebles.service';
 import { PropietariosService } from 'src/app/services/propietarios.service';
 import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-crear-inmueble',
   templateUrl: './crear-inmueble.component.html',
@@ -19,7 +19,8 @@ export class CrearInmuebleComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private inmuebleSvc: InmueblesService,
-    private propietarioSvc: PropietariosService
+    private propietarioSvc: PropietariosService,
+    private http: HttpClient
   ) {
     this.initForm();
   }
@@ -36,10 +37,27 @@ export class CrearInmuebleComponent implements OnInit {
 
       console.log(inmueble);
 
-      // const createdInmueble = this.inmuebleSvc.createInmueble(inmueble);
+      const createdInmueble = this.inmuebleSvc.createInmueble(inmueble).subscribe(data=>{
+        this.router.navigate(['/inmuebles']);
+      });
     } else {
       console.log('Error de formulario');
     }
+  }
+
+  onFileChanged(event:any) {
+    const file = event.target.files[0]
+
+    const uploadData = new FormData();
+    uploadData.append('myFile', file, Date.now().toString()+'.jpg');
+    this.http.post('https://server.rucampo.com:3000/api/files', uploadData)
+      .subscribe(data=>{
+        console.log(data);
+        
+        this.inmuebleForm.patchValue({
+          img_url: data
+        })
+      });
   }
 
   isvalidField(field: string): string {
@@ -53,7 +71,7 @@ export class CrearInmuebleComponent implements OnInit {
 
   private initForm(): void {
     this.inmuebleForm = this.fb.group({
-      img_url: ['algo', [Validators.required]],
+      img_url: ['', [Validators.required]],
       direccion: ['', [Validators.required]],
       salon: ['', [Validators.required]],
       piso: ['', [Validators.required]],
