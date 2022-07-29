@@ -10,16 +10,16 @@ export class InmueblesService {
 
   createInmueble(inmueble: Inmueble) {
     return this.http.post<Inmueble>(
-      `http://localhost:3000/api/inmuebles`,
+      `https://server.rucampo.com:3000/api/inmuebles`,
       inmueble
     );
   }
 
   getInmuebles(): Observable<Inmueble[]> {
-    return this.http.get<Inmueble[]>('http://localhost:3000/api/inmuebles');
+    return this.http.get<Inmueble[]>('https://server.rucampo.com:3000/api/inmuebles');
   }
 
   getInmueble(id: any) {
-    return this.http.get(`http://localhost:3000/api/inmuebles/${id}`);
+    return this.http.get(`https://server.rucampo.com:3000/api/inmuebles/${id}`);
   }
 }

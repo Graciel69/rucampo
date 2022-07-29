@@ -10,17 +10,17 @@ export class PropietariosService {
 
   createPropietario(propietario: any) {
     return this.http.post<Inmueble>(
-      `http://localhost:3000/api/propietarios`,
+      `https://server.rucampo.com:3000/api/propietarios`,
       propietario
     );
   }
 
   getPropietarios() {
-    return this.http.get('http://localhost:3000/api/propietarios');
+    return this.http.get('https://server.rucampo.com:3000/api/propietarios');
   }
 
   getPropietario(id: any) {
-    return this.http.get(`http://localhost:3000/api/propietarios/${id}`);
+    return this.http.get(`https://server.rucampo.com:3000/api/propietarios/${id}`);
   }
 
   getPropietrioOfInmueble(id: any) {

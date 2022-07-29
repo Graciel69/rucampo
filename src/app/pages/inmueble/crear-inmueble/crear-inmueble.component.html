@@ -2,6 +2,7 @@
   <form class="col-md-11 page" (ngSubmit)="onSave()" [formGroup]="inmuebleForm">
     <div class="form-group text-center">
       <img src="../../../../assets//img/camera.png" class="img-camera" alt="" />
+<<<<<<< HEAD
       <input
         id="file"
         type="file"
@@ -11,6 +12,10 @@
       <label style="display: block" for="file" class="img-text"
         >Colocar imagen</label
       >
+=======
+      <input id="file" type="file" (change)="onFileChanged($event)" style="display: none;">
+      <label style="display: block;" for="file" class="img-text">Colocar imagen</label>
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
     </div>
 
     <div class="form row">
@@ -238,7 +243,15 @@
     </div>
 
     <div class="form-group text-center">
+<<<<<<< HEAD
       <button type="submit" class="btn btn-inmueble btn-primary mt-3">
+=======
+      <button
+        type="submit"
+        
+        class="btn btn-inmueble btn-primary mt-3"
+      >
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
         Crear Inmueble
       </button>
     </div>

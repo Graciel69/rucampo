@@ -55,16 +55,23 @@ export class CrearInmuebleComponent implements OnInit {
           const body = { inmuebleId: data.id };
           const id = data.propietarioId;
 
+<<<<<<< HEAD
           if (id) {
             this.propietarioSvc.updatePropietario(id, body).subscribe();
           }
         });
       this.router.navigate(['/inmuebles']);
+=======
+      const createdInmueble = this.inmuebleSvc.createInmueble(inmueble).subscribe(data=>{
+        this.router.navigate(['/inmuebles']);
+      });
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
     } else {
       console.log('Error de formulario');
     }
   }
 
+<<<<<<< HEAD
   onFileChanged(event: any) {
     const file = event.target.files[0];
 
@@ -78,6 +85,20 @@ export class CrearInmuebleComponent implements OnInit {
         this.inmuebleForm.patchValue({
           img_url: 'https://server.rucampo.com/images/' + data.file,
         });
+=======
+  onFileChanged(event:any) {
+    const file = event.target.files[0]
+
+    const uploadData = new FormData();
+    uploadData.append('myFile', file, Date.now().toString()+'.jpg');
+    this.http.post('https://server.rucampo.com:3000/api/files', uploadData)
+      .subscribe((data:any)=>{
+        console.log(data.file);
+
+        this.inmuebleForm.patchValue({
+          img_url: 'https://server.rucampo.com/images/'+data.file
+        })
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
       });
   }
 
@@ -92,7 +113,11 @@ export class CrearInmuebleComponent implements OnInit {
 
   private initForm(): void {
     this.inmuebleForm = this.fb.group({
+<<<<<<< HEAD
       img_url: ['sometime', [Validators.required]],
+=======
+      img_url: ['', [Validators.required]],
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
       direccion: ['', [Validators.required]],
       salon: ['', [Validators.required]],
       piso: ['', [Validators.required]],

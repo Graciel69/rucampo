@@ -3,8 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PropietariosService } from 'src/app/services/propietarios.service';
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
 import { InmueblesService } from 'src/app/services/inmuebles.service';
+=======
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
 @Component({
   selector: 'app-crear-propietario',
   templateUrl: './crear-propietario.component.html',
@@ -18,8 +21,12 @@ export class CrearPropietarioComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private propietarioSvc: PropietariosService,
+<<<<<<< HEAD
     private http: HttpClient,
     private inmuebleSvc: InmueblesService
+=======
+    private http: HttpClient
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
   ) {
     this.initForm();
   }
@@ -43,11 +50,22 @@ export class CrearPropietarioComponent implements OnInit {
     if (this.propietarioForm.valid) {
       let createdPropietario;
       const propietario = this.propietarioForm.value;
+<<<<<<< HEAD
       this.propietarioSvc.createPropietario(propietario).subscribe((res) => {
         createdPropietario = res;
         this.router.navigate(['/propietarios']);
         console.log(createdPropietario);
       });
+=======
+      this.propietarioSvc
+        .createPropietario(propietario)
+        .subscribe((res) => {
+          (createdPropietario = res)
+          this.router.navigate(['/propietarios']);
+          console.log(createdPropietario);
+        });
+
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
     }
   }
 
@@ -61,6 +79,11 @@ export class CrearPropietarioComponent implements OnInit {
         console.log(data);
       });
   }*/
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c06a2d9b6af0d3bc9fa8cc466479d6cd36162ff7
   private initForm(): void {
     this.propietarioForm = this.fb.group({
       nombre: ['', [Validators.required]],
