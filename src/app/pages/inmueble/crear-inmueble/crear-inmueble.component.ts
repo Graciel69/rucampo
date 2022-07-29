@@ -5,7 +5,7 @@ import { tap } from 'rxjs/operators';
 import { InmueblesService } from 'src/app/services/inmuebles.service';
 import { PropietariosService } from 'src/app/services/propietarios.service';
 import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-crear-inmueble',
   templateUrl: './crear-inmueble.component.html',
@@ -19,27 +19,66 @@ export class CrearInmuebleComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private inmuebleSvc: InmueblesService,
-    private propietarioSvc: PropietariosService
+    private propietarioSvc: PropietariosService,
+    private http: HttpClient
   ) {
     this.initForm();
   }
 
   ngOnInit(): void {
-    this.propietarioSvc
-      .getPropietarios()
-      .subscribe((propietario) => (this.propietarios = propietario));
+    this.propietarioSvc.getPropietarios().subscribe((propietario: any) => {
+      const empty = propietario;
+
+      let a: any[] = [];
+
+      empty.forEach((value: any, i: any) => {
+        const id = value.inmuebleId;
+        if (id == '0') {
+          a.push(value);
+          return value;
+        } else {
+          return;
+        }
+      });
+
+      this.propietarios = a;
+    });
   }
 
   onSave() {
     if (this.inmuebleForm.valid) {
       const inmueble: Inmueble = this.inmuebleForm.value;
 
-      console.log(inmueble);
+      const createdInmueble = this.inmuebleSvc
+        .createInmueble(inmueble)
+        .subscribe((data) => {
+          const body = { inmuebleId: data.id };
+          const id = data.propietarioId;
 
-      // const createdInmueble = this.inmuebleSvc.createInmueble(inmueble);
+          if (id) {
+            this.propietarioSvc.updatePropietario(id, body).subscribe();
+          }
+        });
+      this.router.navigate(['/inmuebles']);
     } else {
       console.log('Error de formulario');
     }
+  }
+
+  onFileChanged(event: any) {
+    const file = event.target.files[0];
+
+    const uploadData = new FormData();
+    uploadData.append('myFile', file, Date.now().toString() + '.jpg');
+    this.http
+      .post('https://server.rucampo.com:3000/api/files', uploadData)
+      .subscribe((data: any) => {
+        console.log(data.file);
+
+        this.inmuebleForm.patchValue({
+          img_url: 'https://server.rucampo.com/images/' + data.file,
+        });
+      });
   }
 
   isvalidField(field: string): string {
@@ -53,7 +92,7 @@ export class CrearInmuebleComponent implements OnInit {
 
   private initForm(): void {
     this.inmuebleForm = this.fb.group({
-      img_url: ['algo', [Validators.required]],
+      img_url: ['sometime', [Validators.required]],
       direccion: ['', [Validators.required]],
       salon: ['', [Validators.required]],
       piso: ['', [Validators.required]],

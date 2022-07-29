@@ -2,7 +2,15 @@
   <form class="col-md-11 page" (ngSubmit)="onSave()" [formGroup]="inmuebleForm">
     <div class="form-group text-center">
       <img src="../../../../assets//img/camera.png" class="img-camera" alt="" />
-      <h3 class="img-text">Colocar imagen</h3>
+      <input
+        id="file"
+        type="file"
+        (change)="onFileChanged($event)"
+        style="display: none"
+      />
+      <label style="display: block" for="file" class="img-text"
+        >Colocar imagen</label
+      >
     </div>
 
     <div class="form row">
@@ -86,7 +94,7 @@
             *ngFor="let propietario of propietarios"
             value="{{ propietario.id }}"
           >
-            {{ propietario.nombre }}
+            {{ propietario.nombre }} {{ propietario.apellido }}
           </option>
         </select>
         <div class="invalid-feedback">
@@ -230,11 +238,7 @@
     </div>
 
     <div class="form-group text-center">
-      <button
-        type="submit"
-        (click)="onSave()"
-        class="btn btn-inmueble btn-primary mt-3"
-      >
+      <button type="submit" class="btn btn-inmueble btn-primary mt-3">
         Crear Inmueble
       </button>
     </div>

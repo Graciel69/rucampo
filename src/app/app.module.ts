@@ -11,6 +11,7 @@ import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { InmueblesModule } from './pages/inmueble/inmuebles/inmuebles.module';
 
 @NgModule({
   declarations: [AppComponent, NopageFoundComponent],
@@ -18,6 +19,7 @@ import { MaterialModule } from './material.module';
     BrowserModule,
     AppRoutingModule,
     AuthRoutingModule,
+    InmueblesModule,
     PagesRoutingModule,
     AuthModule,
     PagesModule,

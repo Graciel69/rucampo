@@ -7,7 +7,7 @@ import { PagesComponent } from './pages/pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { CrearInmuebleComponent } from './inmueble/crear-inmueble/crear-inmueble.component';
-import { InmueblesComponent } from './inmueble/inmuebles/inmuebles.component';
+
 import { CrearEncargoComponent } from './encargo/crear-encargo/crear-encargo.component';
 import { EncargosComponent } from './encargo/encargos/encargos.component';
 import { PedidosComponent } from './pedido/pedidos/pedidos.component';
@@ -25,7 +25,7 @@ import { MaterialModule } from '../material.module';
     UsersComponent,
     PagesComponent,
     CrearInmuebleComponent,
-    InmueblesComponent,
+
     CrearEncargoComponent,
     EncargosComponent,
     PedidosComponent,

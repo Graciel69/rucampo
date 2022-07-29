@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PropietariosService } from 'src/app/services/propietarios.service';
+import { HttpClient } from '@angular/common/http';
+import { Inmueble } from 'src/app/shared/interfaces/inmueble.interface';
+import { InmueblesService } from 'src/app/services/inmuebles.service';
 @Component({
   selector: 'app-crear-propietario',
   templateUrl: './crear-propietario.component.html',
@@ -9,16 +12,23 @@ import { PropietariosService } from 'src/app/services/propietarios.service';
 })
 export class CrearPropietarioComponent implements OnInit {
   propietario: any;
+  inmuebles!: Inmueble[];
   propietarioForm!: FormGroup;
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private propietarioSvc: PropietariosService
+    private propietarioSvc: PropietariosService,
+    private http: HttpClient,
+    private inmuebleSvc: InmueblesService
   ) {
     this.initForm();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.inmuebleSvc
+      .getInmuebles()
+      .subscribe((res: Inmueble[]) => (this.inmuebles = res));
+  }
 
   isvalidField(field: string): string {
     const validatedField = this.propietarioForm.get(field);
@@ -33,20 +43,30 @@ export class CrearPropietarioComponent implements OnInit {
     if (this.propietarioForm.valid) {
       let createdPropietario;
       const propietario = this.propietarioForm.value;
-      this.propietarioSvc
-        .createPropietario(propietario)
-        .subscribe((res) => (createdPropietario = res));
-
-      console.log(createdPropietario);
+      this.propietarioSvc.createPropietario(propietario).subscribe((res) => {
+        createdPropietario = res;
+        this.router.navigate(['/propietarios']);
+        console.log(createdPropietario);
+      });
     }
   }
 
+  /*onFileChanged(event:any) {
+    const file = event.target.files[0]
+
+    const uploadData = new FormData();
+    uploadData.append('myFile', file, Date.now().toString()+'.jpg');
+    this.http.post('https://server.rucampo.com:3000/api/files', uploadData)
+      .subscribe(data=>{
+        console.log(data);
+      });
+  }*/
   private initForm(): void {
     this.propietarioForm = this.fb.group({
       nombre: ['', [Validators.required]],
       apellido: ['', [Validators.required]],
       telefono: ['', [Validators.required]],
-      viviendaId: ['0', [Validators.required]],
+      inmuebleId: [''],
     });
   }
 }

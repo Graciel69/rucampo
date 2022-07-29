@@ -21,7 +21,7 @@ export class PropietariosComponent implements OnInit {
       const a = propietarios;
 
       a.forEach((value: any, index: any) => {
-        const id = value.viviendaId;
+        const id = value.inmuebleId;
         if (id == '0') {
           value.vivienda = [{ direccion: 'no inmueble' }];
           return value;

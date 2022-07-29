@@ -14,18 +14,18 @@
     <tbody>
       <tr *ngFor="let inmueble of inmuebles">
         <th>
-          <img
-            class="img-table"
-            src="https://contaduriapublica.org.mx/wp-content/uploads/2020/01/shutterstock_189023420-1140x812.jpg"
-            alt=""
-          />
+          <img class="img-table" [src]="inmueble.img_url" alt="" />
         </th>
         <td>
           <div class="table-content-center">{{ inmueble.direccion }}</div>
         </td>
         <td>
           <div class="table-content-center">
-            {{ inmueble.propietario?.nombre }}
+            <select class="form-control">
+              <option *ngFor="let propietario of inmueble.propietario">
+                {{ propietario.nombre }} {{ propietario.apellido }}
+              </option>
+            </select>
           </div>
         </td>
         <td>
@@ -49,12 +49,85 @@
 
             <img
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              [attr.data-bs-target]="'#myModal' + inmueble.id"
               src="../../../../assets/iconos-tabla/Comentario.svg"
               alt=""
             />
           </div>
         </td>
+        <div
+          id="myModal{{ inmueble.id }}"
+          class="modal fade"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div
+              style="border-radius: 15px !important; padding: 3%"
+              class="modal-content"
+            >
+              <form
+                (ngSubmit)="onSave(comentarioForm.value, inmuebleId.value)"
+                #comentarioForm="ngForm"
+              >
+                <div class="modal-header">
+                  <label for="comentario">Comentario</label>
+                </div>
+                <div class="modal-body">
+                  <textarea
+                    class="form-control"
+                    style="border-radius: 8px !important"
+                    placeholder="Introduce el comentario"
+                    id="comentario"
+                    name="comentario"
+                    ngModel
+                    cols="56"
+                    rows="5"
+                  ></textarea>
+                  <div>
+                    <p class="mt-2">El comprador sigue interesado en vender?</p>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        id="si"
+                        value="si"
+                        name="vender"
+                        ngModel
+                      />
+                      <label class="form-check-label" for="si"> Si </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        id="no"
+                        value="no"
+                        name="vender"
+                        ngModel
+                        checked
+                      />
+                      <label class="form-check-label" for="no"> No </label>
+                    </div>
+                    <div>
+                      <input #inmuebleId value="{{ inmueble.id }}" />
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        style="margin-right: 40%"
+                        type="submit"
+                        class="btn btn-inmueble btn-primary"
+                      >
+                        Enviar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </tr>
     </tbody>
   </table>
@@ -66,67 +139,3 @@
 >
   Crear Inmueble
 </button>
-
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div
-      style="border-radius: 15px !important; padding: 3%"
-      class="modal-content"
-    >
-      <div class="modal-header">
-        <label for="comentario">Comentario</label>
-      </div>
-      <div class="modal-body">
-        <textarea
-          class="form-control"
-          style="border-radius: 8px !important"
-          name=""
-          placeholder="Introduce el comentario"
-          id="comentario"
-          cols="56"
-          rows="5"
-        ></textarea>
-        <div>
-          <p class="mt-2">El comprador sigue interesado en vender?</p>
-
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="vender"
-              id="si"
-              value="si"
-            />
-            <label class="form-check-label" for="si"> Si </label>
-          </div>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="vender"
-              id="no"
-              value="no"
-              checked
-            />
-            <label class="form-check-label" for="no"> No </label>
-          </div>
-          <div class="modal-footer">
-            <button
-              style="margin-right: 40%"
-              type="submit"
-              class="btn btn-inmueble btn-primary"
-            >
-              Enviar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>

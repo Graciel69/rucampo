@@ -22,4 +22,14 @@ export class PropietariosService {
   getPropietario(id: any) {
     return this.http.get(`http://localhost:3000/api/propietarios/${id}`);
   }
+
+  getPropietrioOfInmueble(id: any) {
+    return this.http.get(
+      `http://localhost:3000/api/propietarios/propietario-inmueble/${id}`
+    );
+  }
+
+  updatePropietario(id: any, body: any) {
+    return this.http.put(`http://localhost:3000/api/propietarios/${id}`, body);
+  }
 }

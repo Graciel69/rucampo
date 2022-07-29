@@ -12,12 +12,14 @@ export interface Inmueble {
   dormitorio: number;
   valoracion: string;
   baño: number;
-  propietario?: {
-    nombre: string;
-    apellido: string;
-    telefono: number;
-    vivienda: string;
-  };
+  propietario?: [
+    {
+      nombre: string;
+      apellido: string;
+      telefono: number;
+      inmuebleId: string;
+    }
+  ];
   cocina: string;
   terraza: number;
   m2: string;
